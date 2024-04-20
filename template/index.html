@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Cafe HTML Template by Tooplate</title>
+    <link rel="stylesheet" href="{% static 'webpage/fontawesome/css/all.min.css' %}"> <!-- https://fontawesome.com/ -->
+    <link href="https:/fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{% static 'webpage/css/tooplate-wave-cafe.css' %}">
+
+<!--
+Tooplate 2121 Wave Cafe
+https://www.tooplate.com/view/2121-wave-cafe
+-->
+</head>
+
+<body>
+  <div class="tm-container">
+    <div class="tm-row">
+      <!-- Site Header -->
+      <div class="tm-left">
+        <div class="tm-left-inner">
+          <div class="tm-site-header">
+            <i class="fas fa-coffee fa-3x tm-site-logo"></i>
+            <h1 class="tm-site-name">Supervisor News FootBall (Projet IA)</h1>
+          </div>
+          <nav class="tm-site-nav">
+            <ul class="tm-site-nav-ul">
+              <li class="tm-page-nav-item">
+                <a href="{% url 'good' %}" class="tm-page-link active">
+                  <i class="fas fa-mug-hot tm-page-link-icon"></i>
+                  <span>Good News</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="{% url 'bad' %}" class="tm-page-link">
+                  <i class="fas fa-users tm-page-link-icon"></i>
+                  <span>Bad News</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="{% url 'verify' %}" class="tm-page-link">
+                  <i class="fas fa-glass-martini tm-page-link-icon"></i>
+                  <span>News in Instance Verification</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="{% url 'contact' %}" class="tm-page-link">
+                  <i class="fas fa-comments tm-page-link-icon"></i>
+                  <span>Contact Teams</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>        
+      </div>
+      <div class="tm-content"> <!-- Ajout du bloc de contenu -->
+        {% block conten %} 
+        <!-- Contenu de la page -->
+        {% endblock %}
+      </div>
+    </div>
+    <footer class="tm-site-footer">
+      
+      |
+    </footer>
+  </div> <!-- Fin du conteneur tm-container -->
+  
+  <!-- Background video -->
+  <div class="tm-video-wrapper">
+      <i id="tm-video-control-button" class="fas fa-pause"></i>
+      <video autoplay muted loop id="tm-video">
+          <source src="{% static 'webpage/video/wave-cafe-video-bg.mp4' %}" type="video/mp4">
+      </video>
+  </div>
+
+  <script src="{% static 'webpage/js/jquery-3.4.1.min.js' %}"></script>    
+  <script>
+  
+  </script>
+</body>
+</html>
